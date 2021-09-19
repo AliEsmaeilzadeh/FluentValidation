@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\Users\Queries\GetUserAddressesService\**" />
+    <EmbeddedResource Remove="Services\Users\Queries\GetUserAddressesService\**" />
+    <None Remove="Services\Users\Queries\GetUserAddressesService\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Context\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.8.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paraph_Food.Common\Paraph_Food.Common.csproj" />
+    <ProjectReference Include="..\Paraph_Food.Domain\Paraph_Food.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

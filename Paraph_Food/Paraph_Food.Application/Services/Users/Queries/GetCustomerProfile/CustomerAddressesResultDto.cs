@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Paraph_Food.Application.Services.Users.Queries.GetCustomerProfile
+{
+    public class CustomerAddressesResultDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public bool IsDefault { get; set; }
+    }
+}
